@@ -1,5 +1,5 @@
 ---
-title: "Data Analytics Blog"
+title: "Project/Experience Blog"
 site: distill::distill_website
 listing: posts
 ---

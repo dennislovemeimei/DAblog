@@ -1,7 +1,7 @@
 name: "DAblog"
-title: "Data Analytics Blog"
+title: "Jiang Yueyang's Blog"
 description: |
-  Data Analytics Blog
+  Project Blog
 output_dir: "_site"
 navbar:
   right:
