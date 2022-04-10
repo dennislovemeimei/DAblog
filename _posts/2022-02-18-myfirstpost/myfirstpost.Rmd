@@ -4,7 +4,7 @@ description: |
   This is my first blog.
 author:
   - name: Yueyang Jiang
-    url: www.linkedin.com/in/yueyang-jiang
+    url: www.linkedin.com/in/yueyang-jiang/
 date: 2022-02-18
 output:
   distill::distill_article:
