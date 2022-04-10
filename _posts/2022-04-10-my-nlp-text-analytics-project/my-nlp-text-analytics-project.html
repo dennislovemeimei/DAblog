@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>My NLP Text Analytics Project</title>
+
+  <meta property="description" itemprop="description" content="This is a text study combined with sentiment analysis and topic modelling."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-04-10"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-04-10"/>
+  <meta name="article:author" content="Yueyang Jiang"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="My NLP Text Analytics Project"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This is a text study combined with sentiment analysis and topic modelling."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="My NLP Text Analytics Project"/>
+  <meta property="twitter:description" content="This is a text study combined with sentiment analysis and topic modelling."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["My NLP Text Analytics Project"]},{"type":"character","attributes":{},"value":["This is a text study combined with sentiment analysis and topic modelling.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Yueyang Jiang"]},{"type":"character","attributes":{},"value":["www.linkedin.com/in/yueyang-jiang"]}]}]},{"type":"character","attributes":{},"value":["2022-04-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["img/3-1.png","img/3-2.png","img/3-3.png","img/4-1.png","img/4-2.png","img/4-3.png","img/5-1.png","img/5-2.png","img/5-3.png","my-nlp-text-analytics-project_files/anchor-4.2.2/anchor.min.js","my-nlp-text-analytics-project_files/bowser-1.9.3/bowser.min.js","my-nlp-text-analytics-project_files/distill-2.2.21/template.v2.js","my-nlp-text-analytics-project_files/header-attrs-2.11/header-attrs.js","my-nlp-text-analytics-project_files/jquery-3.6.0/jquery-3.6.0.js","my-nlp-text-analytics-project_files/jquery-3.6.0/jquery-3.6.0.min.js","my-nlp-text-analytics-project_files/jquery-3.6.0/jquery-3.6.0.min.map","my-nlp-text-analytics-project_files/popper-2.6.0/popper.min.js","my-nlp-text-analytics-project_files/tippy-6.2.7/tippy-bundle.umd.min.js","my-nlp-text-analytics-project_files/tippy-6.2.7/tippy-light-border.css","my-nlp-text-analytics-project_files/tippy-6.2.7/tippy.css","my-nlp-text-analytics-project_files/tippy-6.2.7/tippy.umd.min.js","my-nlp-text-analytics-project_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="my-nlp-text-analytics-project_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="my-nlp-text-analytics-project_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="my-nlp-text-analytics-project_files/popper-2.6.0/popper.min.js"></script>
+  <link href="my-nlp-text-analytics-project_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="my-nlp-text-analytics-project_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="my-nlp-text-analytics-project_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="my-nlp-text-analytics-project_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="my-nlp-text-analytics-project_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="my-nlp-text-analytics-project_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="my-nlp-text-analytics-project_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"My NLP Text Analytics Project","description":"This is a text study combined with sentiment analysis and topic modelling.","authors":[{"author":"Yueyang Jiang","authorURL":"www.linkedin.com/in/yueyang-jiang","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-10T00:00:00.000+08:00","citationText":"Jiang, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>My NLP Text Analytics Project</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>This is a text study combined with sentiment analysis and topic modelling.</p></p>
+</div>
+
+<div class="d-byline">
+  Yueyang Jiang www.linkedin.com/in/yueyang-jiang 
+  
+<br/>2022-04-10
+</div>
+
+<div class="d-article">
+<h1 id="introduction">1.0 Introduction</h1>
+<p>Since the start of the COVID-19 pandemic, people have been using Twitter to share news, information, opinions, and emotions on COVID-19 related matters (Yu M, 2020) . Social media have provided an outlet for expressing views and feelings during this period. Research has shown that the number of Twitter users increased at a faster rate compared with pre-pandemic periods, experiencing higher year-on-year growth (Iqbal, 2022) .</p>
+<p>Topic modeling and sentiment analysis have been widely used to identify issues and people’s opinions about COVID-19–related issues. Analyses were conducted to identify patterns of health communications in diverse kinds of data sources, communities, and locations. Most of the research focused on social media such as Reddit posts (Daniel C. Stokes MS, 2020) and tweets (Michelle Odlum, 2020) .</p>
+<p>Our motivation for this work is to extract information that can support campaigns for improving COVID-19 related support measures taken by governments or companies. The COVID-19 pandemic has forced a major shift in how employees are working (now mostly Working from Home (WFH)). Enterprise social networking platforms such Yammer and employee perception surveys conducted internally can be seen as an effective enterprise-wide barometer of staff sentiment. They are playing an increasingly important role as organizations look to navigate their way through this current global predicament. Research has shown a record levels of Yammer activity during the transition period to WFH and the levels of responsiveness and engagement between staff increased (Lee &amp; Dawson, 2021) . Our analytical approach can be used for analyzing company survey results (focusing on free-form questions), Yammer post, comments and general employee feedback to understand employee sentiments and topics of conversations. We aspire to generate an analytical model with public tweets and methods like sentiment analysis and topic modelling that helps organizations understand the sentiments and topics expressed by employees during this pandemic, so companies can provide support of policies to address employee well-being.</p>
+<h1 id="methodology">2.0 Methodology</h1>
+<p>Our goal was to understand the disposition of people during the COVID-19 pandemic through posts on Tweeter aka tweets. The analytical approach is summarized below and a visual representation has been included in the appendix.<br />
+<strong>Study Data</strong><br />
+We first collected tweets (raw data) with a COVID-19 hashtag through the Twitter API. Due to the large amount of data available and download speed limitations, we focused on three-days’ worth of data in this work. Our COVID-19 tweets dataset includes over 14,000 tweets posted between 4 and 6 March 2022, both days inclusive. The dataset comprises 13 features including among others username, user location, user description, tweet date and tweet text.</p>
+<p>An additional dataset was Sentiment140 dataset, which includes 1.6 million tweets, labelled as negative, positive and neutral. Apart from the sentiment feature (categorical variable), the dataset includes the date of the tweet, user, and text. The dataset is in the public domain the link is provided in the appendix.</p>
+<p><strong>Study Approach</strong></p>
+<p>Tweets were first pre-processed and prepared for analysis. Analysis then proceeded on three parallel tracks. The first track involved lexicon-based sentiment analysis using the VADER library. The second track utilized classification algorithms (Logistic Regression, Support Vector Machines, Naïve Bayes) trained on the Sentiment140 dataset. As our COVID-19 tweet dataset is not labelled, classification algorithms were used to validate the lexicon-based sentiment analysis.</p>
+<p>The third track involved topic modeling based on Latent Semantic Analysis <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis"><strong>LSA</strong></a> and Latent Dirichlet Allocation <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation"><strong>LDA</strong></a> using the scikit-learn and Gensim libraries. Each track is discussed in more detail below.</p>
+<h1 id="solution-details">3.0 Solution Details</h1>
+<h3 id="text-pre-processing">3.1 Text Pre-Processing</h3>
+<p>Our raw dataset has 13 features. There were no “re-tweets” to remove. Our tweets cover only three days and therefore temporal analysis would not be meaningful. We only kept “text” feature for analysis. The raw text was pre-processed prior to analysis as follows:</p>
+<ul>
+<li>Tweets converted to lowercase</li>
+<li>Removal of URL links</li>
+<li>Placeholders (These are often inserted with a link or video and make no sense for our analysis)</li>
+<li>HTML reference characters</li>
+<li>Removal of characters like @ &amp;‘#’ to eliminate unnecessary factors that will affect our analysis)</li>
+<li>Non-Letter characters such as punctuations and some emojis are were removed for topic modeling and sentiment analysis using Sentiment 140 but were kept for sentiment analysis using VADER. As discussed before, VADER is able to take these into account.</li>
+<li>Tokenize</li>
+<li>Stop words for tokens (Remove stop-words using the stop-words list from NLTK)</li>
+<li>Stemming for tokens (Reduce the words to their derived stems)</li>
+<li>Remove hyphen (-) in tokens A comparison between the original text and cleaned text using the steps above is shown below.</li>
+</ul>
+<p><img src="img/3-1.png" style="width:120.0%" /></p>
+<h3 id="lexiconrule-based-sentiment-analysis">3.2 Lexicon/Rule-Based Sentiment Analysis</h3>
+<p>For lexicon-based approaches, a sentiment is defined by its semantic orientation and the intensity of each word in the sentence. Generally, a text message will be represented by bag of words.</p>
+<p>TextBlob is a Python library for lexicon-based sentiment analysis. TextBlob returns the polarity and subjectivity of an input sentence. Polarity lies between [-1,1] with ‘-1’ defining a negative sentiment and ‘1’ defining a positive sentiment. (Barai, 2021) VADER (Valence Aware Dictionary and Sentiment Reasoner) is another lexicon-based sentiment analyzer that has pre-defined rules for words or lexicons.</p>
+<p>A comparison between Texblob and VADER showed that TextBlob is underperforming with negative sentences, particularly negations. Furthermore, VADER also considers the impact of exclamation marks, slang and emojis, emphasis into the compound score. In social media Emojis are often used to express emotion, so we chose VADER-lexicon method to proceed our sentiment analysis.</p>
+<p>The criteria for classifying text based on compound scores is: (Positive: compound score &gt;= 0.05), (Neutral: -0.05 &lt; compound score &lt; 0.05), (Negative: compound score &lt;= -0.05).</p>
+<h3 id="classification-using-sentiment140">3.2 Classification Using Sentiment140</h3>
+<p>Our raw dataset of COVID-19 tweets is not labelled and manually labelling the tweets would be time-consuming. Instead, we used Sentiment 140, a dataset which contains 1.6 million twitter messages, with positive or negative labels to train different classification models and compare predictions with the rule-based approach. Every class (positive or negative) represents 50% of the dataset, so the data is balanced.</p>
+<p><strong>Analysis process</strong></p>
+<p><img src="img/3-2.png" style="width:120.0%" /></p>
+<p><strong>Model building</strong></p>
+<p>TF-IDF (term frequency-inverse document frequency) associates each word in a document with a number that represents the importance of that word - frequent in that document but not across documents. By vectorizing the documents and converting text data to a numerical format, we are then able to apply different supervised learning models.</p>
+<p>For reducing calculating task and time of training model, we set max_df as 0.5, since the positive data and negative data contain 50% of all documents respectively, in an extreme situation that all the positive ones have a typical word, we don’t ignore it, and min_df as 0.001 to reduce the vocabulary shape.</p>
+<p><img src="img/3-3.png" style="width:120.0%" /></p>
+<p><strong>Classification models</strong></p>
+<p>We chose classification models such as Naïve Bayes, Logistic Regression, SVM and Neural Networks. Performance in term of accuracy was comparable among the different models (see Experiment section.</p>
+<h3 id="topic-modeling">3.3 Topic Modeling</h3>
+<p>In this project we used, Latent Semantic Analysis (LSA) and Latent Dirichlet Allocation (LDA) for topic modelling. Implementation of the LDA technique was done using three different algorithms, namely:</p>
+<ul>
+<li>LDA model included in the Gensim library.<br />
+</li>
+<li>LDA model included in the scikit-learn library<br />
+</li>
+<li>LDA model in the Mallet library</li>
+</ul>
+<p>The challenge with using different models was choosing the most appropriate. We used the Coherence score for to compare results from the different algorithms. Comparing results from models of different libraries presents an additional challenge and we used our own judgement based on the predicted topics.</p>
+<p>Another challenge was using mallet with newer versions of the gensim library since newer versions no longer support the mallet wrapper. We included in the GitHub code in a separate .py file and imported manually.</p>
+<h1 id="experiments">4.0 Experiments</h1>
+<h3 id="sentiment-analysis-using-supervised-learning">4.1 Sentiment Analysis Using Supervised Learning</h3>
+<p>As discussed above, we used different supervised learning models to classify tweets into positive and negative. We experimented with different parameters in each model but the effect on accuracy was not significant. Since the dataset is balanced, Precision, Recall and F1 score are quite similar to accuracy. The performance of each model on the Sentiment 140 (training) data was about 75%.</p>
+<p><img src="img/4-1.png" style="width:120.0%" /></p>
+<p>We combine positive text and negative text into a combination data frame and using all the Sentiment140 data frame as training data, fit in and produce new models, using the combination data as test data.</p>
+<p><img src="img/4-2.png" style="width:120.0%" /></p>
+<h3 id="topic-modelling">4.2 Topic Modelling</h3>
+<p>As discussed above, we experimented with different models and libraries for topic modelling. We used the Coherence score for each model and evaluated the value of this score over different values for the number of topics to select: 1) the best performing model, and 2) the most suitable number of topics. An example is shown below comparing the coherence score between the LDA model in Gensim and the LDA model in Mallet.</p>
+<p>We experimented with topic values ranging from 2 to 24 and extracted the coherence score at each stage. We used the ”umass” score as it was readily available for all models. However, scikit-learn scores were significantly different from the Gensim LDA and Mallet scores and likely not directly comparable. In this case, we compared the predicted topics among the models for consistency. The predicted topics by LSA and LDA models in scikit-learn were comparable with the topics predicted by mallet.</p>
+<p><img src="img/4-3.png" style="width:120.0%" /></p>
+<p>In addition, majority of models showed that the number of topics with the highest average coherence is 6. We proceeded with mallet as our model choice with 6 as the number of topics based on the coherence score as well as visual inspection of the topics.</p>
+<h1 id="results-and-analyses">5.0 Results and Analyses</h1>
+<h3 id="sentiment-analysis-results">5.1 Sentiment Analysis Results</h3>
+<p>Since the performance on the training set was similar for all supervised learning models (trained on Sentiment140) we tested, we chose Naïve Bayes to obtain predictions. We also obtained predictions using the VADER lexicon. Comparison between the two approached showed an agreement of about 80 percent. We note that we performed a comparison between Positive and Negative predictions only since Sentiment140 does not include Neutral labels.</p>
+<p>Since our raw data do not contain labels, it was challenging to determine which approach performs better. However, we considered this agreement reasonable and chose to proceed with VADER (rule-based).</p>
+<p>The overall distribution of predicted sentiments in the table below shows an almost equal split among the three different sentiments predicted, i.e., positive, neutral, and negative.</p>
+<p><img src="img/5-1.png" style="width:120.0%" /></p>
+<h3 id="topic-modelling-results">5.2 Topic Modelling Results</h3>
+<p>The approach for determining the topics for the dataset and the most relevant topic for each tweet was described above. The following table shows the number of topics that we selected, the keywords in each topic and our labelled topic.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TOPIC NO.</th>
+<th>KEYWORDS</th>
+<th>LABEL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>tests, flow, lateral, selling, cost, price, pandemic, commit, calling, global</td>
+<td>Prices (Global/Self-Tests)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>cases, coronavirus, total, deaths, march, today, 2022, india, omicron, active</td>
+<td>Global Cases/Deaths</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>world, ukraine, years, time, virus, russia, war, government, good, ukrainerussianwar</td>
+<td>War/Global Affairs</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>people, health, test, propaganda, public, testing, back, study, covidisnotover, 2020</td>
+<td>Health/Testing</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>analytics, data, latest, team, county, publichealth, insights, datascience, 2022-03-01, globalhealth</td>
+<td>US Reporting By County</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>vaccine, vaccination, vaccines, vaccinated, administered, masks, doses, mask, read, china</td>
+<td>Vaccination Status</td>
+</tr>
+</tbody>
+</table>
+<p>In general, the algorithm does reasonably well in determining broad categories for the dataset tweets. Given that the dataset includes tweets over a period of only three days, our hypothesis was that topics would focus mostly on current affairs and not cover wide range of topics, taking also into account that we chose tweets with the covid-19 hashtag.</p>
+<p>The overall distribution of predicted topics is shown in the figure on the left. There is a similar split by topic. Most tweets were assigned to the War/Global Affairs topic and the least number of tweets are about reporting of cases in the USA. There is similar representation of the remaining topics ranging between 15% and 18%.</p>
+<p><img src="img/5-2.png" style="width:120.0%" /></p>
+<p>Our dataset is not labelled, and we could only evaluate the accuracy of the topic modelling through visual inspection. As expected, the topic of some tweets is wrongly predicted but overall, the model appears to be doing a reasonably well. Further work could lead into better results, and this is discussed in later sections.</p>
+<ul>
+<li>Topic 1 includes tweets with almost identical text. These tweets are about the prices of lateral flow tests in the UK, asking pharmacies (e.g., Boots) to sell these tests at cost.</li>
+<li>Topic 2 includes tweets with updates about cases globally, with India standing out.</li>
+<li>Topic 3 is the most interesting because of the overlap of COVID-19 with the war in Ukraine. A quick visual inspection showed that a few tweets with this topic have to do with the fact that the war has removed COVID-19 from the headlines.</li>
+<li>Topic 4 is a mix of issues ranging from health effects to misinformation and propaganda about wearing masks and not being vaccinated.</li>
+<li>Topic 5 includes similar tweets, pertaining to COVID-19 statistics for USA counties.</li>
+<li>Topic 6 is about vaccines and vaccination status globally ranging from vaccination country statistics to vaccination travel requirements</li>
+</ul>
+<p>The distribution of sentiments by topic is shown in the following figure.</p>
+<p><img src="img/5-3.png" style="width:120.0%" /></p>
+<p>For the Prices/Self-Tests topic, we see a larger percentage of positive topics (63%). This was a challenging topic because the majority of tweets are requests to UK pharmacies to sell lateral flow tests at cost. The language in some of these tweets implies indignation at the price of these tests, hence the request. However, it is implied rather than explicitly stated. Other tweets with the same topic are more direct. An example is as follows:</p>
+<p><strong>1. Positive Prediction (Prices/Self-Tests Topic):</strong> “<em><span class="citation" data-cites="BootsUK">@BootsUK</span></em> <em><span class="citation" data-cites="LloydsPharmacy">@LloydsPharmacy</span></em> <em><span class="citation" data-cites="LidlGB">@LidlGB</span></em> <em><span class="citation" data-cites="superdrug">@superdrug</span></em> will you commit to selling lateral flow tests at cost price, rather than profiting from a global pandemic? <em>#COVID19</em></p>
+<p><strong>2. Negative Prediction (Prices/Self-Tests Topic):</strong> “Right now we’re facing skyrocketing prices and the additional costs of lateral flow tests could be an unaffordable burden. That’s why I’m calling on you <em><span class="citation" data-cites="BootsUK">@BootsUK</span></em> <em><span class="citation" data-cites="LloydsPharmacy">@LloydsPharmacy</span></em> <em><span class="citation" data-cites="LidlGB">@LidlGB</span></em> <em><span class="citation" data-cites="superdrug">@superdrug</span></em> to commit to selling these tests at cost price. <em>#COVID19</em>.</p>
+<p>As expected, the Cases/Deaths topic has a low number of positive tweets (14%). The split between neutral and negative cases has to do with a split between tweets that present facts (cases) and tweets that include negative words like death, sickness etc. Similarly, for the USA Reporting Topic, the higher percentage of negative sentiments (56%) is due to the inclusion of the word “death” in the statistics. Remaining topics have similar split among the sentiments.</p>
+<h1 id="discussion-and-gap-analysis">6.0 Discussion and Gap Analysis</h1>
+<p>This analysis shows that topic modelling and sentiment analysis using available libraries can be used to extract insights about views and sentiments on a topic discussed on social media or any free-form text. However, the analysis presented in the report has limitation that can be addressed in future work on this topic. These include:</p>
+<ul>
+<li>Dataset comprised only three-days’ worth of tweets precluding temporal analysis</li>
+<li>Dataset was not labelled; hence we could not obtain a quantitative accuracy measure beyond visual inspection.</li>
+<li>Further, more detailed cleaning could improve the analysis. For example:</li>
+<li>Many non-letter characters used in tweets affect the pre-process accuracy</li>
+<li>Hard to only leave the emojis and punctuations, as most methods apply to whole non-letter characters</li>
+<li>Rule-based sentiment analysis is based on explicitly defined scenarios in the algorithm. For example, Vader considers the contextual effects of “but,” but not similar conjunctions like “although” or “however.”</li>
+<li>Word count in positive tweets is lower than negative ones</li>
+<li>Use of deep learning techniques (e.g., random forest model) is limited by the large number of data coupled with laptop processing power</li>
+<li>Comparing the performance of the same techniques implemented in different libraries is challenging, which in turn increases</li>
+</ul>
+<h1 id="work-and-conclusion">7.0 Work and Conclusion</h1>
+<p>Our future scope has 3 tasks to work with, the first is to find more about how to classify the sentiment level of people by more layers, for example, is the ‘like’ ‘very like’ or just ‘normally like’? To achieve this, we need to find a solution to define a score benchmark and use the calculation of the results to match with the benchmark to get the corresponding answer.</p>
+<p>The second is to scale the model to learn about general public’s opinions about the COVID-19 topics, moreover, this could reflect people’s instant feedback about the current affairs, like government policies facing the covid situation.</p>
+<p>Lastly, this could finally be developed into a product with multiple functions to apply to companies. With an input module, an API linkage to the updating dataset to set up the model with capability of extracting data in certain frequency, a dynamic monitor dashboard could be established to achieve easy and transparent visualization of historical data and to provide insights for strategic decision making.</p>
+<p>Large multinational companies conduct periodic surveys to obtain employee feedback on various topics that affect them. This can also be used in enterprise social networking platforms to monitor employees’ sentiments towards other essential topics, such as local government response to the pandemic situation, healthcare support by company, offline examination, and mental health by using DL algorithms to increase their performance on the dataset.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
