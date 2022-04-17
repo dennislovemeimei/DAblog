@@ -16,7 +16,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# 1.0 Overview (回顾)  
+# 1.0 Overview 
+# 1.0 概述  
 
 The [**Ukraine War**](https://www.nytimes.com/news-event/ukraine-russia?name=styln-russia-ukraine&region=TOP_BANNER&block=storyline_menu_recirc&action=click&pgtype=LegacyCollection&variant=show) has posted great pressure on the Europe's Energy supply, causing significant increase in the living cost of citizens. Also, the pandemic lock-down of Shanghai in China continues, with increasing number of new test-positive cases arising. It is estimated to last till early May, but the government has authorized some enterprises to operate as usual to meet the demand of manufacture, such as Tesla (auto-mobile) and power industry companies.  
 
@@ -85,6 +86,8 @@ The lock-down effect of Shanghai is yet to reflect on the export/import figure. 
 ![](img/China Trade.svg){width=120%}  
 
 # 4.0 Future Outlook  
+# 4.0 未来展望  
+
 ![](img/China v Us.jpg){width=120%} 
 
 In summary, the US will likely to see a long-term CPI drop back and stable  GDP growth at about 2% annually. China GDP growth is likely to stay around 5% level, which is still leading compared to the developed countries. The probability of Recession of China (10%) and US(25%) is low.  
